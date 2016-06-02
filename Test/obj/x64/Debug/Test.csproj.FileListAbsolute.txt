@@ -1,0 +1,14 @@
+D:\MergeQuery\Test\obj\x64\Debug\ResolveAssemblyReference.cache
+D:\MergeQuery\Test\obj\x64\Debug\Test.Form1.resources
+D:\MergeQuery\Test\obj\x64\Debug\Test.Properties.Resources.resources
+D:\MergeQuery\Test\obj\x64\Debug\ResGen.read.1.tlog
+D:\MergeQuery\Test\obj\x64\Debug\ResGen.write.1.tlog
+D:\MergeQuery\Test\bin\x64\Debug\Test.exe.config
+D:\MergeQuery\Test\bin\x64\Debug\Test.exe
+D:\MergeQuery\Test\bin\x64\Debug\Test.pdb
+D:\MergeQuery\Test\bin\x64\Debug\MergeQuery.dll
+D:\MergeQuery\Test\bin\x64\Debug\Interop.SQLDMO.dll
+D:\MergeQuery\Test\bin\x64\Debug\MergeQuery.pdb
+D:\MergeQuery\Test\bin\x64\Debug\MergeQuery.xml
+D:\MergeQuery\Test\obj\x64\Debug\Test.exe
+D:\MergeQuery\Test\obj\x64\Debug\Test.pdb

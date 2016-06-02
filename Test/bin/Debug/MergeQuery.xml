@@ -1,0 +1,777 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MergeQuery</name>
+    </assembly>
+    <members>
+        <member name="T:MergeQueryUtil.MergeCommon">
+            <summary>
+            动态表的共用类库
+            </summary>
+        </member>
+        <member name="M:MergeQueryUtil.MergeCommon.GetYYYYMM(System.DateTime)">
+            <summary>
+            根据指定的时间获取年月
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeCommon.GetYYYYMMDD(System.DateTime)">
+            <summary>
+            根据指定的时间获取年月日
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeCommon.GetTableSchama(System.String,System.String)">
+            <summary>
+            获取指定表的结构
+            </summary>
+            <param name="tablename"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeCommon.GetTableSchama(System.String,System.String,System.String)">
+            <summary>
+            获取指定表的结构
+            </summary>
+            <param name="tablename"></param>
+            <param name="yyyyMMORyyyyMMdd"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeCommon.GetHistoryTime(System.String,System.String,System.DateTime@,System.DateTime@,System.String)">
+            <summary>
+            获取指定表的记录中最早时间和最晚时间
+            </summary>
+            <param name="tablename"></param>
+            <param name="timeField"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="connConfig"></param>
+        </member>
+        <member name="M:MergeQueryUtil.MergeCommon.GetStartTime(System.String,System.String,System.String)">
+            <summary>
+            获取指定表记录中的最早时间
+            </summary>
+            <param name="tablename"></param>
+            <param name="timeField"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeCommon.GetEndTime(System.String,System.String,System.String)">
+            <summary>
+            获取指定表记录中的最晚时间
+            </summary>
+            <param name="tablename"></param>
+            <param name="timeField"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeCommon.ExistsTable(System.String,System.String)">
+            <summary>
+            判断指定的表在当前数据库中是否存在
+            </summary>
+            <param name="tablename"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MergeQueryUtil.MergeSQLQuery">
+            <summary>
+            生成查询动态表的SQL脚本类库，注意：order by语句不能放在where参数中，而应该静态函数执行完毕后，在外面结构尾部加上
+            </summary>
+        </member>
+        <member name="M:MergeQueryUtil.MergeSQLQuery.GetQuerySQL(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取查询月表数据的SQL语句
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeSQLQuery.GetQuerySQL_DayLog(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取查询日表数据的SQL语句
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeSQLQuery.GetQuerySQLAt(System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取查询月表数据的SQL语句
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="time"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeSQLQuery.GetQuerySQLAt_DayLog(System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取查询日表数据的SQL语句
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="time"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeSQLQuery.GetQuerySQLRange(System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String)">
+            <summary>
+            获取查询月表数据的SQL语句
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeSQLQuery.GetQuerySQLRange_DayLog(System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String)">
+            <summary>
+            获取查询日表数据的SQL语句
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MergeQueryUtil.MergeSQLUpdate">
+            <summary>
+            生成更新动态表的SQL脚本类库
+            </summary>
+        </member>
+        <member name="M:MergeQueryUtil.MergeSQLUpdate.GetUpdateSQL(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取更新月表数据的SQL语句
+            </summary>
+            <param name="tablenames"></param>
+            <param name="updateFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeSQLUpdate.GetUpdateSQL_DayLog(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取更新日表数据的SQL语句
+            </summary>
+            <param name="tablenames"></param>
+            <param name="updateFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeSQLUpdate.GetUpdateSQL(System.String,System.String,System.String,System.DateTime,System.String,System.String)">
+            <summary>
+            获取更新月表数据的SQL语句
+            </summary>
+            <param name="tablenames"></param>
+            <param name="updateFields"></param>
+            <param name="timeField"></param>
+            <param name="time"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeSQLUpdate.GetUpdateSQL_DayLog(System.String,System.String,System.String,System.DateTime,System.String,System.String)">
+            <summary>
+            获取更新日表数据的SQL语句
+            </summary>
+            <param name="tablenames"></param>
+            <param name="updateFields"></param>
+            <param name="timeField"></param>
+            <param name="time"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeSQLUpdate.GetUpdateSQL(System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String)">
+            <summary>
+            获取更新月表数据的SQL语句
+            </summary>
+            <param name="tablenames"></param>
+            <param name="updateFields"></param>
+            <param name="timeField"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MergeQueryUtil.MergeQuery">
+            <summary>
+            查询合并动态表的结果集类库
+            </summary>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetData(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取有史以来的所有数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetData_DayLog(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取有史以来的所有数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetDataRange(System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取在指定时间段内的所有数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetDataRange_DayLog(System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取在指定时间段内的所有数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetDataAfter(System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取从指定时间开始之后的所有数据(log表一定得放在tablenames的第一位)
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="start"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetDataAfter_DayLog(System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取从指定时间开始之后的所有数据(log表一定得放在tablenames的第一位)
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="start"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetDataBefore(System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取在指定的时间之前所有数据(log表一定得放在tablenames的第一位)
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="end"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetDataBefore_DayLog(System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取在指定的时间之前所有数据(log表一定得放在tablenames的第一位)
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="end"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetDataCurrentMonth(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取当月的数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetDataCurrentMonth_DayLog(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取当月的数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetDataAt(System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取指定时间的数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="time"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetDataAt_DayLog(System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取指定时间的数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="time"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetAdapterAt(System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取指定时间的数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="time"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetAdapterAt_DayLog(System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取指定时间的数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="time"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetAdapter(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取指定月份内某个时间段的数据(不能够跨月份！)
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetAdapter_DayLog(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取指定月份内某个时间段的数据(不能够跨月份！)
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetAdapterRange(System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取指定月份内某个时间段的数据(不能够跨月份！)
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="theMonthStart"></param>
+            <param name="theMonthEnd"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetAdapterRange_DayLog(System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取指定月份内某个时间段的数据(不能够跨月份！)
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="theMonthStart"></param>
+            <param name="theMonthEnd"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetAdapterCurrentMonth(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取当月的数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeQuery.GetAdapterCurrentMonth_DayLog(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取当月的数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="selectFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="orderby"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MergeQueryUtil.MergeUpdate">
+            <summary>
+            更新动态表的记录集类库
+            </summary>
+        </member>
+        <member name="M:MergeQueryUtil.MergeUpdate.UpdateData(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更新月表数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="updateFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+        </member>
+        <member name="M:MergeQueryUtil.MergeUpdate.UpdateData_DayLog(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更新日表数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="updateFields"></param>
+            <param name="timeField"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+        </member>
+        <member name="M:MergeQueryUtil.MergeUpdate.UpdateData(System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String)">
+            <summary>
+            更新月表数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="updateFields"></param>
+            <param name="timeField"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+        </member>
+        <member name="M:MergeQueryUtil.MergeUpdate.UpdateData_DayLog(System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String)">
+            <summary>
+            更新日表数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="updateFields"></param>
+            <param name="timeField"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+        </member>
+        <member name="M:MergeQueryUtil.MergeUpdate.UpdateData(System.String,System.String,System.String,System.DateTime,System.String,System.String)">
+            <summary>
+            更新月表数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="updateFields"></param>
+            <param name="timeField"></param>
+            <param name="time"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeUpdate.UpdateData_DayLog(System.String,System.String,System.String,System.DateTime,System.String,System.String)">
+            <summary>
+            更新日表数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="updateFields"></param>
+            <param name="timeField"></param>
+            <param name="time"></param>
+            <param name="where"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeUpdate.UpdateData(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更新月表数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="updateFields"></param>
+            <param name="idField"></param>
+            <param name="id"></param>
+            <param name="yyyyMM"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.MergeUpdate.UpdateData_DayLog(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更新日表数据
+            </summary>
+            <param name="tablenames"></param>
+            <param name="updateFields"></param>
+            <param name="idField"></param>
+            <param name="id"></param>
+            <param name="yyyyMMdd"></param>
+            <param name="connConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MergeQueryUtil.SqlHelper">
+            <summary>
+            数据库操作类
+            </summary>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.#ctor(System.String)">
+            <summary>
+            数据库连接字符串的配置名称，为空则默认为【MonitoringSystem】
+            </summary>
+            <param name="connStringConfigName"></param>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.SetConnConfig(System.String)">
+            <summary>
+            设置数据库连接字符串的配置名称，默认为【MonitoringSystem】，如果要赋的值与当前值相同则立即返回
+            </summary>
+            <param name="connStringConfigName"></param>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.ExecuteQueryReader(System.String,System.Data.CommandType,System.Data.Common.DbParameter[])">
+            <summary>
+            执行查询操作
+            </summary>
+            <param name="cmdText">命令文本</param>
+            <param name="type">命令类型</param>
+            <param name="param">文本参数数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.ExecuteQueryReader(System.String)">
+            <summary>
+            执行查询操作
+            </summary>
+            <param name="sql">命令文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.ExecuteQueryDataTable(System.String,System.Data.CommandType,System.Data.Common.DbParameter[])">
+            <summary>
+            执行查询操作
+            </summary>
+            <param name="cmdText">SQL命令</param>
+            <param name="type"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.ExecuteQueryDataTable(System.String)">
+            <summary>
+            执行查询操作
+            </summary>
+            <param name="sql">SQL命令</param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.GetDataAdapter(System.String)">
+            <summary>
+            执行查询操作
+            </summary>
+            <param name="sql">SQL命令</param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.ExecuteQueryDataTable(System.Data.Common.DbCommand,System.Data.CommandType,System.Data.Common.DbParameter[])">
+            <summary>
+            执行查询操作
+            </summary>
+            <param name="cmd">命令对象</param>
+            <param name="type">命令类型</param>
+            <param name="param">文本参数数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.ExecuteScalar(System.String,System.Data.CommandType,System.Data.Common.DbParameter[])">
+            <summary>
+            执行查询操作返回第一行第一列对象
+            </summary>
+            <param name="cmdText"></param>
+            <param name="type"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.ExecuteScalar(System.String)">
+            <summary>
+            执行查询操作返回第一行第一列对象
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.ExecuteNonQuery(System.String,System.Data.CommandType,System.Data.Common.DbParameter[])">
+            <summary>
+            执行增删改操作，返回受影响行数
+            </summary>
+            <param name="cmdText"></param>
+            <param name="type"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.ExecuteNonQuery(System.String)">
+            <summary>
+            执行增删改操作，返回受影响行数
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.SQLDbBackup(System.String,System.Data.SqlClient.SqlConnectionStringBuilder,SQLDMO.BackupSink_PercentCompleteEventHandler,SQLDMO.Backup@,System.String)">
+            <summary>
+            SQL数据库备份
+            </summary>
+            <param name="filename">要备份到的文件全路径</param>
+            <param name="connStrBuilder">连接字符串构造器</param>
+            <param name="Backup_PercentComplete">进度</param>
+            <param name="oBackup">数据库备份服务对象</param>
+            <param name="remark">备份备注</param>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.CancelDbBackup(SQLDMO.Backup,SQLDMO.BackupSink_PercentCompleteEventHandler)">
+            <summary>
+            取消指定备份服务的备份进程
+            </summary>
+            <param name="oBackup"></param>
+            <param name="Backup_PercentComplete"></param>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.SQLDbRestore(System.String,System.Data.SqlClient.SqlConnectionStringBuilder,SQLDMO.RestoreSink_PercentCompleteEventHandler,SQLDMO.Restore@)">
+            <summary>
+            SQL恢复数据库
+            </summary>
+            <param name="filename">备份集文件的全路径</param>
+            <param name="connStrBuilder">连接字符串构造器</param>
+            <param name="Restore_PercentComplete">进度</param>
+            <param name="oRestore">数据库还原服务对象</param>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.CancelDbRestore(SQLDMO.Restore,SQLDMO.RestoreSink_PercentCompleteEventHandler)">
+            <summary>
+            取消指定还原服务的还原进程
+            </summary>
+            <param name="oRestore"></param>
+            <param name="Restore_PercentComplete"></param>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.OnLine(System.String)">
+            <summary>
+            联机指定数据库
+            </summary>
+            <param name="DBName"></param>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.OffLine(System.String)">
+            <summary>
+            脱机指定数据库
+            </summary>
+            <param name="DBName"></param>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.OffAndOnLine(System.String)">
+            <summary>
+            脱机再联机指定数据库
+            </summary>
+            <param name="DBName"></param>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.KillProcess(System.String)">
+            <summary>
+            杀死指定数据库的进程
+            </summary>
+            <param name="DbName"></param>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.ShrinkDB(System.String)">
+            <summary>
+            收缩数据库
+            </summary>
+            <param name="DbName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.ExistsTable(System.String)">
+            <summary>
+            是否存在指定的数据库对象
+            </summary>
+            <param name="tablename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MergeQueryUtil.SqlHelper.ExistsColumn(System.String,System.String)">
+            <summary>
+            是否存在指定的数据列
+            </summary>
+            <param name="tablename"></param>
+            <param name="columnName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MergeQueryUtil.SqlHelper.CanConnect">
+            <summary>
+            当前数据库是否能连接上
+            </summary>
+        </member>
+        <member name="P:MergeQueryUtil.SqlHelper.IsOpened">
+            <summary>
+            当前数据库是否已经打开
+            </summary>
+        </member>
+        <member name="P:MergeQueryUtil.SqlHelper.ConnectionStringConfigName">
+            <summary>
+            设置或获取数据库连接字符串的配置名称，设置时会使得Conn重新构造！
+            </summary>
+        </member>
+        <member name="P:MergeQueryUtil.SqlHelper.Conn">
+            <summary>
+            获取数据库连接对象
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,10 @@
+F:\MergeQuery\MergeQuery\bin\Debug\MergeQuery.dll
+F:\MergeQuery\MergeQuery\bin\Debug\MergeQuery.pdb
+F:\MergeQuery\MergeQuery\bin\Debug\NLog.dll
+F:\MergeQuery\MergeQuery\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\MergeQuery\MergeQuery\obj\x86\Debug\MergeQuery.Properties.Resources.resources
+F:\MergeQuery\MergeQuery\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+F:\MergeQuery\MergeQuery\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+F:\MergeQuery\MergeQuery\obj\x86\Debug\MergeQuery.dll
+F:\MergeQuery\MergeQuery\obj\x86\Debug\MergeQuery.pdb
+F:\MergeQuery\MergeQuery\bin\Debug\MergeQuery.XML

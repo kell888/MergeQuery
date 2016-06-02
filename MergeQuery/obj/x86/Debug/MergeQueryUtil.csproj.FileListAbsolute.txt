@@ -1,0 +1,10 @@
+F:\MergeQuery\MergeQuery\bin\Debug\MergeQuery.XML
+F:\MergeQuery\MergeQuery\bin\Debug\MergeQuery.dll
+F:\MergeQuery\MergeQuery\bin\Debug\MergeQuery.pdb
+F:\MergeQuery\MergeQuery\bin\Debug\NLog.dll
+F:\MergeQuery\MergeQuery\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\MergeQuery\MergeQuery\obj\x86\Debug\MergeQuery.dll
+F:\MergeQuery\MergeQuery\obj\x86\Debug\MergeQuery.pdb
+F:\MergeQuery\MergeQuery\bin\Debug\Interop.SQLDMO.dll
+F:\MergeQuery\MergeQuery\bin\Debug\NLog.pdb
+F:\MergeQuery\MergeQuery\bin\Debug\NLog.xml

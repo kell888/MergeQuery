@@ -1,0 +1,7 @@
+D:\MergeQuery\MergeQuery\obj\x64\Debug\ResolveAssemblyReference.cache
+D:\MergeQuery\MergeQuery\bin\x64\Debug\MergeQuery.XML
+D:\MergeQuery\MergeQuery\bin\x64\Debug\Interop.SQLDMO.DLL
+D:\MergeQuery\MergeQuery\bin\x64\Debug\MergeQuery_64.dll
+D:\MergeQuery\MergeQuery\bin\x64\Debug\MergeQuery_64.pdb
+D:\MergeQuery\MergeQuery\obj\x64\Debug\MergeQuery_64.dll
+D:\MergeQuery\MergeQuery\obj\x64\Debug\MergeQuery_64.pdb

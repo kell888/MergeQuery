@@ -1,0 +1,18 @@
+C:\Users\Administrator\documents\visual studio 2010\Projects\FTPUpDownloader\FTPUpDownloader\bin\Debug\FTPUpDownloader.exe
+C:\Users\Administrator\documents\visual studio 2010\Projects\FTPUpDownloader\FTPUpDownloader\bin\Debug\FTPUpDownloader.pdb
+C:\Users\Administrator\documents\visual studio 2010\Projects\FTPUpDownloader\FTPUpDownloader\obj\x86\Debug\FTPUpDownloader.Form1.resources
+C:\Users\Administrator\documents\visual studio 2010\Projects\FTPUpDownloader\FTPUpDownloader\obj\x86\Debug\FTPUpDownloader.Properties.Resources.resources
+C:\Users\Administrator\documents\visual studio 2010\Projects\FTPUpDownloader\FTPUpDownloader\obj\x86\Debug\FTPUpDownloader.csproj.GenerateResource.Cache
+C:\Users\Administrator\documents\visual studio 2010\Projects\FTPUpDownloader\FTPUpDownloader\obj\x86\Debug\FTPUpDownloader.exe
+C:\Users\Administrator\documents\visual studio 2010\Projects\FTPUpDownloader\FTPUpDownloader\obj\x86\Debug\FTPUpDownloader.pdb
+F:\FTPUpDownloader\FTPUpDownloader\obj\x86\Debug\FTPUpDownloader.exe
+F:\FTPUpDownloader\FTPUpDownloader\obj\x86\Debug\FTPUpDownloader.pdb
+F:\FTPUpDownloader\FTPUpDownloader\bin\Debug\FTPUpDownloader.exe
+F:\FTPUpDownloader\FTPUpDownloader\bin\Debug\FTPUpDownloader.pdb
+F:\FTPUpDownloader\FTPUpDownloader\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\FTPUpDownloader\FTPUpDownloader\obj\x86\Debug\FTPUpDownloader.Form1.resources
+F:\FTPUpDownloader\FTPUpDownloader\obj\x86\Debug\FTPUpDownloader.Properties.Resources.resources
+F:\FTPUpDownloader\FTPUpDownloader\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\FTPUpDownloader\FTPUpDownloader\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\Test\FTPUpDownloader\obj\x86\Debug\FTPUpDownloader.exe
+F:\Test\FTPUpDownloader\obj\x86\Debug\FTPUpDownloader.pdb
